@@ -1,13 +1,20 @@
 {
   "name": "mcp_agent",
   "use_mcp": true,
+  "use_playwright_mcp": true,
   "mcp_tools": [
     "python_exec",
     "date_time",
-    "file_system"
+    "file_system",
+    "browser_navigate",
+    "browser_snapshot",
+    "browser_click",
+    "browser_type",
+    "browser_take_screenshot"
   ],
   "mcp_config": {
     "allow_python_execution": true,
+    "allow_browser_automation": true,
     "allowed_modules": [
       "math",
       "datetime",
@@ -16,5 +23,15 @@
       "pathlib",
       "re"
     ]
+  },
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest",
+        "--port",
+        "8931"
+      ]
+    }
   }
 }
