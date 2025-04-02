@@ -1,0 +1,20 @@
+{
+  "name": "mcp_agent",
+  "use_mcp": true,
+  "mcp_tools": [
+    "python_exec",
+    "date_time",
+    "file_system"
+  ],
+  "mcp_config": {
+    "allow_python_execution": true,
+    "allowed_modules": [
+      "math",
+      "datetime",
+      "json",
+      "os.path",
+      "pathlib",
+      "re"
+    ]
+  }
+}
